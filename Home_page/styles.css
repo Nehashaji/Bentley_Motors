@@ -23,9 +23,9 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
-    position: fixed; /* Change to fixed */
-    top: 0; /* Position at the top */
-    width: 100%; /* Take full width of the viewport */
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
     z-index: 1000;
 }
 
@@ -197,21 +197,21 @@ header nav ul li a:hover {
 
 .image-container {
     flex: 0 0 35%;
-    padding: 0; /* Remove any padding */
+    padding: 0; 
     margin-left: 50px;
     margin-right: 10px;
 }
 
 .image-container img {
-    max-width: 100%; /* Ensure the image takes full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 3px; /* Optional: add rounded corners */
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 3px;
 }
 
 .text-container {
     flex: 1;
     margin-left: 20px;
-    padding: 0 10px; /* Adjust padding as needed */
+    padding: 0 10px; 
 }
 
 .text-container h2 {
