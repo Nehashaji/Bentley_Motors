@@ -1,0 +1,304 @@
+/* Home page styling*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #1d1c1c;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: fixed; /* Change to fixed */
+    top: 0; /* Position at the top */
+    width: 100%; /* Take full width of the viewport */
+    z-index: 1000;
+}
+
+header .logo {
+    float: left;
+}
+
+header .logo img {
+    height: 45px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+    padding-top: 0px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 50px;
+}
+
+header nav ul li:first-child {
+    margin-left: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: border-bottom 0.3s;
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    opacity: 0;
+    animation: fade-in 1.5s ease forwards;
+}
+
+.text-overlay h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    
+}
+
+.text-overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* About Section Styles */
+.about {
+    padding: 50px 0;
+    text-align: center;
+    min-height: 300px;
+    padding-bottom: 50px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.about .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #250607;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.about .btn:hover {
+    background-color: #691114;
+}
+
+/* About Bentley Button Styles */
+.about-bentley-btn {
+    margin-top: 10px;
+    position: relative;
+    color: #fff;
+    background: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+.about-bentley-btn:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.about-bentley-btn:before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #1d1c1c;
+}
+
+.about-bentley-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Bentley Lifestyle Section Styles */
+.bentley-lifestyle {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-right: 100px;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.image-container {
+    flex: 0 0 35%;
+    padding: 0; /* Remove any padding */
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure the image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 3px; /* Optional: add rounded corners */
+}
+
+.text-container {
+    flex: 1;
+    margin-left: 20px;
+    padding: 0 10px; /* Adjust padding as needed */
+}
+
+.text-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 50px 0;
+    color: #ffffff;
+}
+
+.contact-info {
+    width: 50%;
+    float: left;
+    
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.contact-info ul {
+    padding-left: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.contact-form {
+    width: 50%;
+    float: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #a01a49;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c24a74;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1d1c1c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff1867;
+}
