@@ -3,7 +3,6 @@
 
 /*VARIABLES CSS */
 :root {
-  /* Colors */
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(82, 60%, 28%);
   --title-color: hsl(0, 0%, 15%);
@@ -12,7 +11,6 @@
   --container-color: hsl(0, 0%, 100%);
 
   /*Font and typography*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --h2-font-size: 1.25rem;
   --small-font-size: .813rem;
@@ -46,7 +44,6 @@ img {
 }
 
 /* CARD */
-
 .card__container {
   display: grid;
   row-gap: 3.5rem;
@@ -124,6 +121,7 @@ img {
 .card__article:not(:hover) .card__data {
   animation: remove-data 1s forwards;
 }
+
 /* Card animation */
 @keyframes show-data {
   50% {
@@ -195,13 +193,16 @@ img {
   animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
+/* keyframe animation*/
 @keyframes animate {
+  /* Starting point of the animation */
   from {
     opacity: 0;
     transform: translate(0, 100px);
     filter: blur(33px);
   }
   to {
+     /* Ending point of the animation */
     opacity: 1;
     transform: translate(0);
     filter: blur(0);
