@@ -16,14 +16,6 @@
   --small-font-size: .813rem;
 }
 
-/*Responsive typography*/
-@media screen and (min-width: 1120px) {
-  :root {
-    --h2-font-size: 1.5rem;
-    --small-font-size: .875rem;
-  }
-}
-
 /* BASE*/
 * {
   box-sizing: border-box;
@@ -160,7 +152,6 @@ img {
   }
 }
 
-/*BREAKPOINTS*/
 /* For medium devices */
 @media screen and (min-width: 768px) {
   .card__container {
