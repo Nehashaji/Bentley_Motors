@@ -19,6 +19,65 @@ body {
     overflow: hidden;
 }
 
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  width: 35px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 2000;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav#nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1500;
+  }
+
+  nav#nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  nav#nav-menu ul li {
+    margin-left: 0;
+  }
+
+  nav#nav-menu.active {
+    display: flex;
+  }
+}
+
+
 /* Header Styles */
 header {
     background-color: rgba(0, 0, 0, 0.7);
@@ -301,4 +360,199 @@ footer p {
 
 .social-icons a:hover {
     color: #ff1867;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 767px) {
+  /* General Layout */
+  .container {
+    padding: 0 15px;
+  }
+
+  header .logo {
+    float: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    float: none;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav ul li {
+    margin-left: 0;
+  }
+
+  header nav ul li a {
+    font-size: 16px;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .text-overlay h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .text-overlay p {
+    font-size: 1rem;
+  }
+
+  /* About Section */
+  .about {
+    padding: 40px 15px;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+
+  .about-bentley-btn {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+
+  /*Lifestyle Section*/
+.bentley-lifestyle {
+  flex-direction: column;
+  margin: 25px 0;
+  padding: 15px 10px;
+}
+
+.image-container {
+  margin: 0 auto 15px;
+  width: 90%;
+  max-width: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.text-container {
+  margin: 0;
+  padding: 0 10px;
+  text-align: center;
+  color: #eee;
+}
+
+.text-container h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+}
+
+.text-container p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+
+ .contact-section {
+  padding: 40px 20px;
+  background-color: #222; /* subtle dark background for contrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  margin: 30px auto;
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-info,
+.contact-form {
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 25px;
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e0e0e0;
+  font-weight: 600;
+  border-bottom: 2px solid  #ff1867; 
+  padding-bottom: 6px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-info ul li i {
+  color:  #ff1867;
+  font-size: 1.2rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: #eee;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #5a9e6f;
+  background-color: #2a2a2a;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #ff1867;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color:  #fa7ba7;
+}
+  /* Footer */
+  footer {
+    padding: 20px 10px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+    margin: 0 6px;
+  }
 }
