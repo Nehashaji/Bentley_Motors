@@ -3,10 +3,10 @@
 /* Slider container */
 .slide {
     position: relative;
-    width: 1000px; 
-    height: 530px; 
+    width: 1000px;
+    height: 530px;
     background: #f5f5f5;
-    overflow: visible;  
+    overflow: hidden; /* Changed from visible to hidden for consistency */
 }
 
 /* Individual slider items */
@@ -15,7 +15,6 @@
     height: 300px;
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%);
     border-radius: 20px;
     background-position: 50% 50%;
     background-size: cover;
@@ -23,33 +22,36 @@
     transition: 0.5s;
 }
 
-/* First and second slider items */
+/* Positioning slider items */
 .slide .item:nth-child(1),
 .slide .item:nth-child(2) {
     top: 0;
     left: 0;
-    transform: translate(0, 0);
-    border-radius: 0;
     width: 100%;
     height: 100%;
+    border-radius: 0;
+    transform: none; /* reset transform */
 }
 
-/* Third slider item */
 .slide .item:nth-child(3) {
     left: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
-/* Fourth slider item */
 .slide .item:nth-child(4) {
     left: calc(50% + 220px);
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
-/* Fifth slider item */
 .slide .item:nth-child(5) {
     left: calc(50% + 440px);
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
-/* Slider items from the sixth one */
+/* Items from 6th onward hidden */
 .slide .item:nth-child(n + 6) {
     left: calc(50% + 660px);
     opacity: 0;
@@ -68,136 +70,170 @@
     display: none;
 }
 
-/* Display content of the second slider item */
+/* Show content only for 2nd slide */
 .slide .item:nth-child(2) .content {
     display: block;
 }
 
-/* Styling for name in content */
+/* Content styling */
 .content .name {
     font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
     opacity: 0;
-    animation: animate 1s ease-in-out 1 forwards;
-    -webkit-text-stroke: 2px black; /* For Chrome, Safari, and Opera */
-    text-stroke: 2px black; /* Standard syntax */
+    animation: animate 1s ease-in-out forwards;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
 }
 
-/* Styling for description in content */
 .content .des {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
     opacity: 0;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    animation: animate 1s ease-in-out 0.3s forwards;
 }
 
-/* Styling for button in content */
 .content button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     opacity: 0;
-    animation: animate 1s ease-in-out 0.6s 1 forwards;
+    animation: animate 1s ease-in-out 0.6s forwards;
 }
 
 /* Animation keyframes */
 @keyframes animate {
     from {
         opacity: 0;
-        transform: translate(0, 100px);
+        transform: translateY(100px);
         filter: blur(33px);
     }
-
     to {
         opacity: 1;
-        transform: translate(0);
+        transform: translateY(0);
         filter: blur(0);
     }
 }
 
-/* Styling for slider navigation buttons */
+/* Slider navigation buttons container */
 .button {
     width: 100%;
     text-align: center;
     position: relative;
     bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 5;
 }
 
-/* Styling for individual navigation buttons */
+/* Individual navigation buttons */
 .button button {
     width: 40px;
     height: 35px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid #000;
+    background: transparent;
     cursor: pointer;
     margin: 0 5px;
-    border: 1px solid #000;
     transition: 0.3s;
+    font-size: 18px;
 }
 
-/* Hover effect for navigation buttons */
+/* Hover effect */
 .button button:hover {
     background: #ababab;
     color: #fff;
-} 
+}
 
-/*Mobile responsive */
+/* Mobile responsive */
 @media (max-width: 768px) {
   .slide {
-    width: 90%;
+    width: 100%;
     height: 400px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
   }
 
+  /* Navigation buttons on mobile */
+  .button {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    gap: 20px;
+    z-index: 10;
+  }
+
+  .button button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .button button:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Hide all slides except active */
   .container .slide .item {
-    width: 160px;
-    height: 240px;
-    left: unset; 
-  }
-
-  .slide .item:nth-child(1),
-  .slide .item:nth-child(2) {
     width: 100%;
     height: 100%;
-    border-radius: 0;
     left: 0;
-  }
-
-.slide .item:nth-child(3) {
-  left: calc(50% + 100px);
-  transform: translate(-50%, -50%);
-}
-
-.slide .item:nth-child(4) {
-  left: calc(50% + 200px);
-}
-
-.slide .item:nth-child(5) {
-  left: calc(50% + 400px);
-}
-
-  .slide .item:nth-child(n + 6) {
-    left: calc(50% + 270px);
+    top: 0;
+    border-radius: 0;
     opacity: 0;
+    z-index: 0;
+    transition: opacity 0.5s ease;
+    display: block;
   }
 
+  /* Show only active slide (assumed 2nd child) */
+  .slide .item:nth-child(2) {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  /* Hide others */
+  .slide .item:not(:nth-child(2)) {
+    display: none;
+  }
+
+  /* Content adjustments for mobile */
   .item .content {
-    left: 50px;
-    width: 220px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 80%;
+    text-align: left;
+    color: #fff;
   }
 
   .content .name {
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: bold;
   }
 
   .content .des {
     font-size: 14px;
+    margin: 10px 0;
   }
 
   .content button {
     font-size: 14px;
     padding: 8px 16px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    opacity: 1; /* Make sure button is visible on mobile */
+    animation: none; /* Disable animation on mobile for simplicity */
   }
 }
