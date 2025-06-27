@@ -463,7 +463,7 @@ footer p {
 
  .contact-section {
   padding: 40px 20px;
-  background-color: #222; /* subtle dark background for contrast */
+  background-color: #222;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   max-width: 500px;
   margin: 30px auto;

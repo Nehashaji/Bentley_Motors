@@ -1,224 +1,198 @@
-/* Slider CSS styling */
-
-/* Slider container */
+/* ===== SLIDER BASE STYLING ===== */
 .slide {
-    position: relative;
-    width: 1000px;
-    height: 530px;
-    background: #f5f5f5;
-    overflow: hidden; /* Changed from visible to hidden for consistency */
+  position: relative;
+  width: 1000px;
+  height: 530px;
+  background: #f5f5f5;
+  overflow: visible;
+  z-index: 0;
+  margin: 0 auto;
 }
 
-/* Individual slider items */
 .container .slide .item {
-    width: 200px;
-    height: 300px;
-    position: absolute;
-    top: 50%;
-    border-radius: 20px;
-    background-position: 50% 50%;
-    background-size: cover;
-    display: inline-block;
-    transition: 0.5s;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
 }
 
-/* Positioning slider items */
+/* First and second slider items */
 .slide .item:nth-child(1),
 .slide .item:nth-child(2) {
     top: 0;
     left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
     width: 100%;
     height: 100%;
-    border-radius: 0;
-    transform: none; /* reset transform */
 }
 
+/* Third slider item */
 .slide .item:nth-child(3) {
     left: 50%;
-    top: 50%;
-    transform: translate(0, -50%);
 }
 
+/* Fourth slider item */
 .slide .item:nth-child(4) {
     left: calc(50% + 220px);
-    top: 50%;
-    transform: translate(0, -50%);
 }
 
+/* Fifth slider item */
 .slide .item:nth-child(5) {
     left: calc(50% + 440px);
-    top: 50%;
-    transform: translate(0, -50%);
 }
 
-/* Items from 6th onward hidden */
+/* Slider items from the sixth one */
 .slide .item:nth-child(n + 6) {
     left: calc(50% + 660px);
     opacity: 0;
 }
 
-/* Content inside slider items */
+/* CONTENT */
 .item .content {
-    position: absolute;
-    top: 50%;
-    left: 100px;
-    transform: translate(0, -50%);
-    width: 300px;
-    text-align: left;
-    color: #eee;
-    font-family: system-ui;
-    display: none;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translate(0, -50%);
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  font-family: system-ui;
+  display: none;
 }
 
-/* Show content only for 2nd slide */
 .slide .item:nth-child(2) .content {
-    display: block;
+  display: block;
 }
 
-/* Content styling */
 .content .name {
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
-    opacity: 0;
-    animation: animate 1s ease-in-out forwards;
-    -webkit-text-stroke: 2px black;
-    text-stroke: 2px black;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px black;
 }
 
 .content .des {
-    margin: 10px 0 20px;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.3s forwards;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
 .content button {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.6s forwards;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
-/* Animation keyframes */
+/* ANIMATIONS */
 @keyframes animate {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-        filter: blur(33px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
-    }
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
 }
 
-/* Slider navigation buttons container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BUTTONS */
 .button {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    bottom: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    z-index: 5;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 20px;
 }
 
-/* Individual navigation buttons */
 .button button {
-    width: 40px;
-    height: 35px;
-    border-radius: 8px;
-    border: 1px solid #000;
-    background: transparent;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: 0.3s;
-    font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-/* Hover effect */
 .button button:hover {
-    background: #ababab;
-    color: #fff;
+  background: #000;
+  color: #fff;
 }
 
-/* Mobile responsive */
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
   .slide {
     width: 100%;
-    height: 400px;
-    margin: 0 auto;
+    height: 450px;
     overflow: hidden;
     position: relative;
-  }
-
-  /* Navigation buttons on mobile */
-  .button {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    gap: 20px;
-    z-index: 10;
-  }
-
-  .button button {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    font-weight: bold;
-    background: #fff;
-    color: #000;
-    border: 1px solid #000;
-    border-radius: 50%;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  .button button:hover {
-    background: #000;
-    color: #fff;
-  }
-
-  /* Hide all slides except active */
-  .container .slide .item {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 0;
-    opacity: 0;
-    z-index: 0;
-    transition: opacity 0.5s ease;
-    display: block;
-  }
-
-  /* Show only active slide (assumed 2nd child) */
-  .slide .item:nth-child(2) {
-    opacity: 1;
+    margin: 0 auto;
     z-index: 1;
   }
 
-  /* Hide others */
-  .slide .item:not(:nth-child(2)) {
+  .container .slide .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0;
+    opacity: 0;
+    z-index: 0;
     display: none;
+    transform: none;
   }
 
-  /* Content adjustments for mobile */
+  .slide .item:nth-child(2) {
+    opacity: 1;
+    z-index: 1;
+    display: block;
+  }
+
   .item .content {
     position: absolute;
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    width: 80%;
+    width: 85%;
     text-align: left;
     color: #fff;
   }
 
   .content .name {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
+    line-height: 1.3;
   }
 
   .content .des {
@@ -231,9 +205,53 @@
     padding: 8px 16px;
     background-color: #fff;
     color: #000;
-    border: none;
     border-radius: 6px;
-    opacity: 1; /* Make sure button is visible on mobile */
-    animation: none; /* Disable animation on mobile for simplicity */
+    border: none;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+
+  .button {
+    position: absolute;
+    bottom: 20px;
+    left: 40%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 999;
+    opacity: 0;
+    animation: fadeInBtn 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .button button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .button button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  @keyframes fadeInBtn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
