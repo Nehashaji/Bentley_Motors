@@ -256,6 +256,7 @@ section.fade-in {
   transform: translateY(0);
 }
 
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
   nav.main-nav .hamburger {
     display: flex;

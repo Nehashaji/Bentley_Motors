@@ -308,7 +308,7 @@ section.fade-in {
   color: #fff;
 }
 
-/* Mobile Responsive Styles */
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
   .card,
   .card.reverse {

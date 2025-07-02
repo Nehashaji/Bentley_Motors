@@ -190,16 +190,18 @@ footer p {
   }
 }
 
+/* ===== MOBILE RESPONSIVE ===== */
+
 @media (max-width: 768px) {
   nav.nav .container {
-    position: relative; /* So nav-items can position correctly */
+    position: relative;
   }
 
   nav.nav .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: absolute; /* Place it at top right */
+    position: absolute;
     top: 15px;
     right: 20px;
     z-index: 2001;
