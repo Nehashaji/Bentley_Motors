@@ -78,7 +78,6 @@
   opacity: 0;
   animation: animate 1s ease-in-out 1 forwards;
   -webkit-text-stroke: 2px black;
-  text-stroke: 2px black;
 }
 
 .content .des {

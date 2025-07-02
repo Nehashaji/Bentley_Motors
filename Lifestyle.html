@@ -1,141 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bentley-lifestyle</title>
-    <link rel="stylesheet" href="Lifestyle_page/lifestyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Slide-in Animation */
-        @keyframes slideIn {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        .slide-in {
-            animation: slideIn 1s ease-out forwards;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bentley-lifestyle</title>
+  <link rel="stylesheet" href="Lifestyle_page/lifestyle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+    .slide-in {
+      animation: slideIn 1s ease-out forwards;
+    }
+  </style>
 </head>
 <body>
-    <!-- Main navigation bar -->
-    <nav class="main-nav">
-        <div class="container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Bentley Motors">
-            </div>
-            <nav>
-                <ul class="nav-items">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Models.html">Models</a></li>
-                    <li><a href="Privacy.html">Privacy & Terms</a></li>
-                </ul>
-            </nav>
-        </div>
-    </nav>
 
-    <header>
-        <div class="header-content about-header">
-            <h1>Bentley Lifestyle</h1>
-            <p>Explore refinement and celebration with Bentley Lifestyle, crafting a masterpiece of every moment 
-                where perfection knows no limits.</p>
-            <a href="#experiences" class="scroll-down">Learn More</a>
-        </div>
-    </header>
+  <!-- Main navigation bar -->
+  <nav class="main-nav">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bentley Motors" />
+      </div>
 
-    <!-- Secondary navigation bar -->
-    <nav class="secondary-nav">
-        <ul>
-            <li><a href="#experiences">Experiences</a></li>
-            <li><a href="#architecture-and-design">Architecture and Design</a></li>
-            <li><a href="#music-and-audio">Music and Audio</a></li>
-            <li><a href="#automotive">Automotive</a></li>
-        </ul>
-    </nav>
+      <!-- Hamburger icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-     <!-- Main content section -->
-    <main>
-        <!-- Section for Experiences -->
-        <section id="experiences" class="fade-in slide-in">
-            <div class="card"> 
-                <img src="Lifestyle_page/Lifestyle-images/Experiences.jpg" alt="Experiences">
-                <div class="card-content">
-                    <h2>Experiences</h2>
-                    <p>Every year, Bentley runs a variety of events for Bentley drivers, enthusiasts and anyone
-                        looking for a closer acquaintance with the Bentley brand. From the excitement of Pebble
-                        Beach Concours to a visit of the Home of Bentley at CW1 House, whatever your interest our
-                        range of events offer something for every intrepid Bentley explorer.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section for Architecture and Design -->
-        <section id="architecture-and-design" class="fade-in reverse slide-in">
-            <div class="card">
-                <div class="card-content">
-                    <h2>Architecture and Design</h2>
-                    <p>Indulge your architectural aspirations with Bentley Lifestyle's collection that seamlessly
-                        blends timeless elegance with contemporary flair. Immerse yourself in a world of bespoke
-                        structures, architectural marvels, and collaborations that redefine the boundaries of luxury
-                        living. Every space tells a story, and yours is waiting to be written in the language of
-                        Bentley refinement.</p>
-                </div>
-                <img src="Lifestyle_page/Lifestyle-images/Architecture.jpg" alt="Architecture and Design">
-            </div>
-        </section>
-
-        <!-- Section for Music and Audio -->
-        <section id="music-and-audio" class="fade-in slide-in">
-            <div class="card">
-                <img src="Lifestyle_page/Lifestyle-images/The art of sound.jpg" alt="Music and Audio">
-                <div class="card-content">
-                    <h2>Music and Audio</h2>
-                    <p>For the connoisseurs of auditory excellence, Bentley Lifestyle presents a world where music
-                        transcends mere notes. Immerse yourself in a curated selection of high-end audio products,
-                        designed to elevate your sonic experience to new heights. Uncover the perfect synergy between
-                        cutting-edge technology and timeless design, where every beat resonates with the spirit of
-                        adventure.</p>
-                </div>
-            </div>
-        </section>
-
-         <!-- Section for Automotive -->
-        <section id="automotive" class="fade-in reverse slide-in">
-            <div class="card">
-                <div class="card-content">
-                    <h2>Automotive</h2>
-                    <p>Your journey continues with Bentley's exclusive line of automotive products, where luxury meets
-                        performance in a seamless embrace. From meticulously crafted accessories to limited-edition
-                        collaborations, each piece is a celebration of the artistry that defines Bentley's automotive
-                        legacy. Embrace the thrill of the road with a touch of unparalleled refinement.</p>
-                </div>
-                <img src="Lifestyle_page/Lifestyle-images/Luxury on wheels.jpg" alt="Automotive">
-            </div>
-        </section>
-    </main>
-
-<!-- Footer section -->
-<footer>
-    <div class="container"> <!-- Copyright information -->
-        <p>&copy; All copyright Bentley Motors 2024 by Neha Valuthundil Shaji</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/BentleyMotors/"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://x.com/BentleyMotors"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/bentleymotors/"><i class="fab fa-instagram"></i></a>
-            <a href="https://uk.linkedin.com/company/bentley-motors-ltd"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.youtube.com/bentleymotors"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.pinterest.co.uk/bentleymotors/"><i class="fab fa-pinterest"></i></a>
-            <a href="https://www.tiktok.com/@bentleymotors?lang=en"><i class="fab fa-tiktok"></i></a>
-        </div>
+      <!-- Main nav links -->
+      <ul class="nav-items" id="navItems">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Models.html">Models</a></li>
+        <li><a href="Privacy.html">Privacy & Terms</a></li>
+      </ul>
     </div>
-</footer>
+  </nav>
 
-    <script src="Lifestyle_page/lifestyle.js"></script><!-- Link to external JavaScript file-->
+  <!-- Header Section -->
+  <header>
+    <div class="header-content about-header">
+      <h1>Bentley Lifestyle</h1>
+      <p>Explore refinement and celebration with Bentley Lifestyle, crafting a masterpiece of every moment where perfection knows no limits.</p>
+      <a href="#experiences" class="scroll-down">Learn More</a>
+    </div>
+  </header>
+
+  <!-- Secondary navigation bar -->
+  <nav class="secondary-nav">
+    <ul>
+      <li><a href="#experiences">Experiences</a></li>
+      <li><a href="#architecture-and-design">Architecture and Design</a></li>
+      <li><a href="#music-and-audio">Music and Audio</a></li>
+      <li><a href="#automotive">Automotive</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section id="experiences" class="fade-in slide-in">
+      <div class="card">
+        <img src="Lifestyle_page/Lifestyle-images/Experiences.jpg" alt="Experiences" />
+        <div class="card-content">
+          <h2>Experiences</h2>
+          <p>Every year, Bentley runs a variety of events for Bentley drivers, enthusiasts and anyone looking for a closer acquaintance with the Bentley brand...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture-and-design" class="fade-in reverse slide-in">
+      <div class="card">
+        <div class="card-content">
+          <h2>Architecture and Design</h2>
+          <p>Indulge your architectural aspirations with Bentley Lifestyle's collection that seamlessly blends timeless elegance with contemporary flair...</p>
+        </div>
+        <img src="Lifestyle_page/Lifestyle-images/Architecture.jpg" alt="Architecture and Design" />
+      </div>
+    </section>
+
+    <section id="music-and-audio" class="fade-in slide-in">
+      <div class="card">
+        <img src="Lifestyle_page/Lifestyle-images/The art of sound.jpg" alt="Music and Audio" />
+        <div class="card-content">
+          <h2>Music and Audio</h2>
+          <p>For the connoisseurs of auditory excellence, Bentley Lifestyle presents a world where music transcends mere notes...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="automotive" class="fade-in reverse slide-in">
+      <div class="card">
+        <div class="card-content">
+          <h2>Automotive</h2>
+          <p>Your journey continues with Bentley's exclusive line of automotive products, where luxury meets performance in a seamless embrace...</p>
+        </div>
+        <img src="Lifestyle_page/Lifestyle-images/Luxury on wheels.jpg" alt="Automotive" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; All copyright Bentley Motors 2024 by Neha Valuthundil Shaji</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/BentleyMotors/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/BentleyMotors"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/bentleymotors/"><i class="fab fa-instagram"></i></a>
+        <a href="https://uk.linkedin.com/company/bentley-motors-ltd"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/bentleymotors"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.pinterest.co.uk/bentleymotors/"><i class="fab fa-pinterest"></i></a>
+        <a href="https://www.tiktok.com/@bentleymotors?lang=en"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script to toggle hamburger menu -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navItems = document.getElementById('navItems');
+
+    hamburger.addEventListener('click', () => {
+      navItems.classList.toggle('active');
+    });
+  </script>
+
+  <script src="Lifestyle_page/lifestyle.js"></script>
 </body>
 </html>

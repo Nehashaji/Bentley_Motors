@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Bentley</title>
-    <link rel="stylesheet" href="About_page/about.css"><!-- Link to external css file-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!-- Linking Font Awesome library for icons -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Bentley</title>
+  <link rel="stylesheet" href="About_page/about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-    <!-- Main navigation bar -->
-    <nav class="main-nav">
-        <div class="container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Bentley Motors"><!--logo image-->
-            </div>
-            <nav>
-                <ul class="nav-items">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Models.html">Models</a></li>
-                    <li><a href="Privacy.html">Privacy & Terms</a></li>
-                </ul>
-            </nav>
-        </div>
-    </nav>
 
-      <!-- Header section -->
-    <header>
-        <div class="header-content about-header">
-            <h1>About Bentley</h1>
-            <p>Experience the pinnacle of luxury and performance.</p>
-            <a href="#foundation" class="scroll-down">Learn More</a>
-        </div>
-    </header>
+  <!-- Main Navigation -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bentley Motors" />
+      </div>
 
-    <!-- Secondary navigation bar -->
-    <nav class="secondary-nav">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="nav-menu" id="nav-menu">
         <ul>
-            <li><a href="#foundation">Bentley Foundation</a></li>
-            <li><a href="#beyond100">Beyond100</a></li>
-            <li><a href="#history">History and Heritage</a></li>
-            <li><a href="#people">People and Expertise</a></li>
-            <li><a href="#motorsport">Motorsport</a></li>
-            <li><a href="#factory">Factory Tour</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Models.html">Models</a></li>
+          <li><a href="Privacy.html">Privacy & Terms</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
+  <header>
+  <!-- Hero Section -->
+  <section class="hero-header">
+    <div class="header-content about-header">
+      <h1>About Bentley</h1>
+      <p>Experience the pinnacle of luxury and performance.</p>
+      <a href="#foundation" class="scroll-down">Learn More</a>
+    </div>
+  </section>
+  </header>
+  <!-- Secondary Navigation -->
+  <nav class="secondary-nav">
+    <ul>
+      <li><a href="#foundation">Bentley Foundation</a></li>
+      <li><a href="#beyond100">Beyond100</a></li>
+      <li><a href="#history">History and Heritage</a></li>
+      <li><a href="#people">People and Expertise</a></li>
+      <li><a href="#motorsport">Motorsport</a></li>
+      <li><a href="#factory">Factory Tour</a></li>
+    </ul>
+  </nav>
+  
     <!-- Main content section -->
     <main>
         <section id="foundation">
@@ -131,7 +140,7 @@
 
      <!-- Footer section -->
     <footer>
-        <div class="container">     <!-- Copyright information -->
+        <div class="container">     
             <p>&copy; All copyright Bentley Motors 2024 by Neha Valuthundil Shaji</p>
             <div class="social-icons"> 
                 <a href="https://www.facebook.com/BentleyMotors/"><i class="fab fa-facebook-f"></i></a>
@@ -146,5 +155,15 @@
     </footer>
     
     <script src="About_page/about.js"></script><!-- Link to external JavaScript file-->
+
+   <!-- JS for Hamburger Menu -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

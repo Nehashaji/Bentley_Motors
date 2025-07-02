@@ -1,5 +1,4 @@
 /*Styling model page*/
-/* Google font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 body {
@@ -11,7 +10,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Header styling */
 header {
   background: url('models_image/Bentley-wallpaper.jpg') no-repeat center center/cover;
   height: 80vh;
@@ -32,16 +30,15 @@ header {
 .header-content h1 {
   font-size: 3.8rem;
   margin: 0;
-  animation: fadeInScale 1s forwards, textGlow 1.5s infinite alternate; /* Animation for title */
+  animation: fadeInScale 1s forwards, textGlow 1.5s infinite alternate;
 }
 
 .header-content p {
   font-size: 1.5rem;
   margin: 1rem 0;
-  animation: fadeInScale 1s forwards 0.5s, textGlow 1.5s infinite alternate; /* Animation for paragraph */
+  animation: fadeInScale 1s forwards 0.5s, textGlow 1.5s infinite alternate;
 }
 
-/* Keyframes for fade-in effect and text glow effect */
 @keyframes fadeInScale {
   0% {
     opacity: 0;
@@ -55,14 +52,13 @@ header {
 
 @keyframes textGlow {
   from {
-    text-shadow: 0 0 10px #0b3d0b, 0 0 20px #0b3d0b, 0 0 30px #0b3d0b, 0 0 40px #0b3d0b, 0 0 50px #0b3d0b; /* Text shadow effect for glow */
+    text-shadow: 0 0 10px #0b3d0b, 0 0 20px #0b3d0b, 0 0 30px #0b3d0b, 0 0 40px #0b3d0b, 0 0 50px #0b3d0b;
   }
   to {
     text-shadow: 0 0 20px #0b3d0b, 0 0 30px #0b3d0b, 0 0 40px #0b3d0b, 0 0 50px #0b3d0b, 0 0 60px #0b3d0b;
   }
 }
 
-/* Main navigation styling */
 nav.main-nav {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
@@ -89,12 +85,26 @@ nav.main-nav .logo img {
   height: 45px;
 }
 
+nav.main-nav .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+nav.main-nav .hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
 nav.main-nav ul.nav-items {
   list-style: none;
-  margin: 0;
+  margin: 0 85px 0 0;
   padding: 0;
   display: flex;
-  margin-right: 85px;
 }
 
 nav.main-nav ul.nav-items li {
@@ -110,47 +120,43 @@ nav.main-nav ul.nav-items li a {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-  transition: border-bottom 0.3s, color 0.3s; /* Transition effect for hover */
+  transition: border-bottom 0.3s, color 0.3s;
 }
 
 nav.main-nav ul.nav-items li a:hover {
-  border-bottom: 2px solid #fff; 
+  border-bottom: 2px solid #fff;
   color: #0b3d0b;
 }
 
-/* Main section styling */
 main {
   padding: 2rem 1rem;
 }
 
-/* Models section styling */
 #models {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; 
-  align-items: flex-start; 
+  justify-content: space-around;
+  align-items: flex-start;
   padding: 2rem 0;
 }
 
-/* Model card styling */
 .model-card {
   background: #000;
   border: 2px solid #0b3d0b;
   border-radius: 10px;
   overflow: hidden;
-  width: 300px; 
-  height: 600px; 
-  margin-bottom: 1rem; 
+  width: 300px;
+  height: 600px;
+  margin-bottom: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  flex-direction: column; 
-  opacity: 0; 
-  transform: translateY(20px); 
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
   animation: cardFadeIn 0.5s forwards, cardBounce 1s infinite alternate;
 }
 
-/* Keyframes for card fade-in effect and bounce animation */
 @keyframes cardFadeIn {
   to {
     opacity: 1;
@@ -167,21 +173,19 @@ main {
   }
 }
 
-/* Apply animation delays for alternating cards */
 .model-card:nth-child(even) {
-  animation-delay: 0.3s; /* Delay for even cards */
+  animation-delay: 0.3s;
 }
 
 .model-card:nth-child(odd) {
-  animation-delay: 0.6s; /* Delay for odd cards */
+  animation-delay: 0.6s;
 }
 
-/* Model info styling */
 .model-info {
-  flex: 1; 
+  flex: 1;
   padding: 1.5rem;
   text-align: center;
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 .model-card img {
@@ -191,8 +195,8 @@ main {
 
 .model-info h2 {
   margin-top: 0;
-  color: #0b6623; 
-  font-size: 1.5rem; 
+  color: #0b6623;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -202,19 +206,17 @@ main {
   color: #fff;
 }
 
-/* Hover effect for model card */
 .model-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Button styling */
 .explore-btn {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #0d8d14; 
+  background-color: #0d8d14;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -224,10 +226,9 @@ main {
 }
 
 .explore-btn:hover {
-  background-color: #054208; 
+  background-color: #054208;
 }
 
-/* Footer styling */
 footer {
   background-color: #000000;
   color: #fff;
@@ -239,7 +240,6 @@ footer p {
   margin-bottom: 10px;
 }
 
-/* Social icons styling */
 .social-icons a {
   color: #fff;
   margin: 0 10px;
@@ -248,33 +248,50 @@ footer p {
 }
 
 .social-icons a:hover {
-  color: #217408; 
+  color: #217408;
 }
 
-/* Fade-in effect for sections */
 section.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Responsive styling */
 @media (max-width: 768px) {
-  .model-card {
-    width: calc(50% - 1rem);
+  nav.main-nav .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 2001;
+    margin-right: 20px;
+  }
+
+  nav.main-nav ul.nav-items {
+    display: none;
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 5px;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    z-index: 2000;
+    min-width: 160px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  nav.main-nav ul.nav-items.active {
+    display: flex;
+  }
+
+  nav.main-nav ul.nav-items li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  nav.main-nav .logo {
+    margin-left: 20px;
   }
 }
-
-@media (max-width: 480px) {
-  .model-card {
-    width: 100%;
-  }
-
-  header .header-content h1 {
-    font-size: 2.5rem;
-  }
-
-  header .header-content p {
-    font-size: 1rem;
-  }
-}
-
