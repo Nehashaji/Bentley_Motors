@@ -70,7 +70,7 @@ body {
 
 /* HERO SECTION */
 .hero-header {
-  background: url('About-images/about-img.jpg') no-repeat center center/cover fixed;
+  background: url('About-images/about-imges.jpg') no-repeat center center/cover fixed;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -252,7 +252,7 @@ section.fade-in {
   color: #fff;
 }
 
-/* RESPONSIVE DESIGN */
+/* MOBLIE RESPONSIVE DESIGN */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
